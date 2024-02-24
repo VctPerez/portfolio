@@ -1,0 +1,211 @@
+<!--Comentario -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> <!-- Codificacion-->
+        <meta name="viewport" content="width=device-width">
+        <title>Portfolio Victor Perez</title>
+        <meta name="description" content="Victor Perez, estudiante de ingenieria del Software.">
+
+        <meta name="robots" content="index, follow">
+        <meta name="theme-color" content="#9f">
+
+        <link rel="icon" type="image/jpg" href="images/yo.jpg" >
+
+        <!--OPEN GRAPH-->
+        <meta property="og:title" content="Portfolio de un estudiante">
+        <meta property="og:description" content="Victor Perez, estudiante de ingenieria del Software.">
+        <meta property="og:iamge" content="/images/yo.jpg">
+
+        <link rel="alternate" href=""> <!--PARA SEPARAR CONTENIDS DUPLICADOS (P.e idiomas)-->
+        
+        <style>
+            body{
+                background: #87e1ff;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Portfolio de Victor Perez</h1>
+
+            <nav> <!--Elementos navegables-->
+                <a href="#experiencia">Experiencia</a>
+                <a href="#proyectos"> Proyectos</a>
+                <a href="https://github.com/VctPerez" target="_blank" 
+                    rel="noreferrer">Github</a>
+            </nav>
+        </header>
+        
+        <video autoplay muted width="100%" src="videos/backgorund.mp4"></video>
+        
+        <main>
+        <p><strong>Estudiante de Ingenieria del Software</strong>
+         en la Universidad de Malaga.</p>
+
+
+        <h2 id="experiencia">Experiencia</h2>
+        <ul>
+            <li class="list-item">UMA - 2021</li>
+        </ul>
+            
+        <!--Para optimizar la carga de la imagen añadir atributo loading="lazy"-->
+        <img 
+            id="victor-image"
+            width="200"
+            height="200"
+            src="images/yo.jpg" 
+            alt="Fotografia de Victor Perez" 
+            title="Victor"
+        > 
+        
+        
+
+        <h2 id="proyectos">Proyectos Realizados</h2>
+        <aside> <!--Informacion de contexto para el usuario-->
+            <header>
+                <h3>Tecnologias Favoritas</h3>
+            </header>
+            <ol type="I"> <!-- mas atributos: reversed, start ...-->
+                <li>Java</li>
+                <li>C++</li>
+                <li>Python</li>
+                <li>C#</li>
+                <li>OracleSQL, MySQL, SQLite, .NET</li>
+            </ul>
+        </aside>
+
+        <section>
+            <article> <!--Elemento con informacion propia que puede ser extraible-->
+                <header>
+                    <h4>Chess 2</h4>
+                </header>
+                <p>
+                    Desarrollo del famoso ajedrez con un 
+                    nuevo modo de juego totalmente original y muchisimas
+                    piezas nuevas.
+                </p>
+                <footer>
+                    <small>Tecologias utilizadas: Java, LibGDX.</small>
+                </footer>
+            </article>
+
+            <article> <!--Elemento con informacion propia que puede ser extraible-->
+                <header>
+                    <h4>Papeles PorFavor</h4>
+                </header>
+                <p>
+                    Aplicación de entretenimiento basada en el famoso juego
+                    <a href="https://papersplea.se/" rel="noreferrer"> Papers Please</a>
+                    donde puedes crear tu propio pasaporte y comprobar si puedes pasar la aduana.
+                </p>
+                <footer>
+                    <small>Tecologias utilizadas: Python, OpenCV, PyTesseract, Google TesseractOCR.</small>
+                </footer>
+            </article>
+            
+            <article> <!--Elemento con informacion propia que puede ser extraible-->
+                <header>
+                    <h4>FirForLife</h4>
+                </header>
+                <p>
+                    Aplicacion enfocada en la gestion (de rutinas, 
+                    sesiones, ejercicios, clientes, entrenadores, etc.) 
+                    para los usuarios de un gimnasio.
+                </p>
+                <footer>
+                    <small>Tecologias utilizadas: C#, MySQL.</small>
+                </footer>
+            </article>
+            
+        </section>
+        
+        <section>
+            <header>
+                <h2> Preguntas Frecuentes</h2>
+            </header>
+
+            <details> <!--Añadiendo el atributo open esta abierto por defecto-->
+                <summary>¿Con qué lenguaje tienes más experiencia?</summary>
+                <p>El lenguaje con el que tengo más experiencia actualmente es 
+                    <strong>Java</strong>, ya que es el lenguaje que más se utiliza 
+                    en las asignaturas de la Univdersidad de Malaga.</p>
+            </details>
+        </section>
+
+        <section>
+            <h2>Formulario de contacto</h2>
+
+            <form method="post" action=""> <!-- Cualquier <button> que este dentor de un formulario, automaticamente es de tipo submit-->
+                <fieldset>
+                    <legend> Informacion personal</legend>
+                    
+                    <label style="display: block;"> Nombre:  <!-- Otra forma de focalizar el input es usar el for con el id-->
+                        <input 
+                            type="text" 
+                            name="name" 
+                            id="name" 
+                            placeholder=" Victor Perez" required>
+                    </label>
+
+                    <label style="display: block;"> Email: 
+                        <input 
+                            type="email" 
+                            name="email" 
+                            id="email"
+                            placeholder="victor.perz14@gmail.com" required>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Informacion adicional</legend>
+                    
+                    <div>
+                        <label style="display: block;"> Telefono: 
+                            <input type="tel" name="phone" id="phone"
+                            placeholder="Telefono" pattern="[0-9]{9}" >
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Otros</legend>
+
+                    <div>
+                        <label for="why">¿Por qué quieres contactar?</label>
+                        
+                        <select name="why" id="why"> 
+                            <option value="1">Trabajo</option>
+                            <option value="2">Duda</option>
+                            <option value="3">Más informacion</option>
+                        </select>
+                    </div>
+                    <div>
+                        <datalist id="languages">
+                            <option value="Java"></option>
+                            <option value="C++"></option>
+                            <option value="Python"></option>
+                            <option value="C#"></option>
+                        </datalist>
+    
+                        <label for=""> ¿Con qué lenguaje necesitas ayuda?
+                            <input list="languages" name="languages">
+                        </label>
+                    </div>
+                </fieldset>
+
+                
+
+                <input type="submit" value="Enviar Contacto">
+            </form>
+        </section>
+
+
+        
+        </main>
+        <footer>
+            God Dammit Yeppers <br>
+            <a href="mailto: victor.perz14@gmail.com"> Contacta conmigo!</a>
+        </footer>
+    </body> 
+
+</html>
